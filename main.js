@@ -140,12 +140,12 @@ const EN = {
     const value = (CONTACT[d.key] || '').trim();
     if (!value) return;
     const a = document.createElement('a');
-    a.className = `btn ${d.primary, 'btn-primary' : 'btn-ghost'}`;
+    a.className = `btn ${d.primary ? 'btn-primary' : 'btn-ghost'}`;
     const href = d.href(value);
     a.href = href;
     if (!/^(mailto|tel):/.test(href)) { a.target = '_blank'; a.rel = 'noopener'; }
-    a.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#${d.icon}"/></svg><span${d.i18n, ` data-i18n="${d.i18n}"` : ''}></span>`;
-    a.querySelector('span').textContent = typeof d.label === 'function', d.label(value) : d.label;
+    a.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#${d.icon}"/></svg><span${d.i18n ? ` data-i18n="${d.i18n}"` : ''}></span>`;
+    a.querySelector('span').textContent = typeof d.label === 'function' ? d.label(value) : d.label;
     contactBox.appendChild(a);
   });
 
@@ -160,21 +160,21 @@ const EN = {
     const en = lang === 'en';
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const k = el.dataset.i18n;
-      const v = en, EN[k] : ME[k];
+      const v = en ? EN[k] : ME[k];
       if (v != null && el.innerHTML !== v) el.innerHTML = v;
     });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => {
       const k = el.dataset.i18nAria;
-      const v = en, EN[k] : ME[`aria:${k}`];
+      const v = en ? EN[k] : ME[`aria:${k}`];
       if (v != null) el.setAttribute('aria-label', v);
     });
-    root.lang = en, 'en' : 'sr-Latn-ME';
+    root.lang = en ? 'en' : 'sr-Latn-ME';
     langButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
   }
 
   const params = new URLSearchParams(location.search);
   const browserLocal = /^(sr|hr|bs|me|cnr|sh)\b/i.test(navigator.language || '');
-  let lang = params.get('lang') || store.get('lang') || (browserLocal, 'me' : 'en');
+  let lang = params.get('lang') || store.get('lang') || (browserLocal ? 'me' : 'en');
   if (lang !== 'en' && lang !== 'me') lang = 'me';
   setLang(lang);
 
@@ -244,7 +244,7 @@ const EN = {
       lbImg.src = it.src;
       lbImg.alt = it.alt;
     }
-    lbCap.textContent = lbItems.length > 1, `${it.alt}  ·  ${lbIndex + 1} / ${lbItems.length}` : it.alt;
+    lbCap.textContent = lbItems.length > 1 ? `${it.alt} (${lbIndex + 1} / ${lbItems.length})` : it.alt;
     lbPrev.hidden = lbNext.hidden = lbItems.length < 2;
   }
 
@@ -269,12 +269,12 @@ const EN = {
   lb.addEventListener('click', e => { if (e.target === lb || e.target === lbStage) lb.close(); });
 
   let swipeX = null;
-  lbStage.addEventListener('pointerdown', e => { swipeX = e.target === lbVid, null : e.clientX; });
+  lbStage.addEventListener('pointerdown', e => { swipeX = e.target === lbVid ? null : e.clientX; });
   lbStage.addEventListener('pointerup', e => {
     if (swipeX == null) return;
     const dx = e.clientX - swipeX;
     swipeX = null;
-    if (Math.abs(dx) > 50 && lbItems.length > 1) lbStep(dx < 0, 1 : -1);
+    if (Math.abs(dx) > 50 && lbItems.length > 1) lbStep(dx < 0 ? 1 : -1);
   });
 
   /* ---------- Galleries ---------- */
