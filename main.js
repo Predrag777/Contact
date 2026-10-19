@@ -89,7 +89,7 @@ const EN = {
   'edu.field': 'Computer Science · focus on AI tools',
   'edu.u1': 'University Mediterranean',
   'edu.u1loc': 'Podgorica, Montenegro',
-  'edu.u2loc': 'Sweden',
+  'edu.u2loc': 'V\u00e4ster\u00e5s, Sweden',
   'skills.title': 'Tools & skills',
   'skill.design': 'Game design',
   'skill.gameplay': 'Gameplay programming',
@@ -103,6 +103,7 @@ const EN = {
 
 
   'contact.eyebrow': 'Contact',
+  'contact.prompt': 'Get in touch',
   'contact.title': 'Got a game idea, Let’s build it.',
   'contact.lead': 'I’m open to collaborations, new projects and conversations about games. Reach out, I’d love to chat.',
   'contact.email': 'Send an email',
