@@ -27,7 +27,7 @@ const EN = {
 
   'proj.eyebrow': 'Featured projects',
   'proj.title': 'Four projects. One developer.',
-  'proj.lead': 'I built Fart Runner, Frootz Fighters and Mr Farts App for Hugo FM, while Heroes of Alatyr is my own game, coming soon. I did it all myself, development and design alike, including the AI tools that power them: sound detection, speech recognition and handwritten digit recognition.',
+  'proj.lead': 'I develop Fart Runner, Frootz Fighters and Mr Farts App for Hugo FM, while Heroes of Alatyr is my own game, coming soon. My work includes game development and design, as well as AI tools for sound detection, speech recognition and handwritten digit recognition.',
   'client.hugo': 'Made for Hugo FM',
   'client.own': 'My own game · coming soon',
   'solo': 'Solo · development & design',
@@ -41,7 +41,7 @@ const EN = {
   't.progression': 'Progression',
 
   'fr.tagline': 'The race where the loudest wins.',
-  'fr.desc': 'A silly arcade racer where the characters sprint around the rim of a toilet, in a fully 3D bathroom. I built a custom fart-sound detection tool for it: while the microphone picks up the sound, your character runs, and the moment it stops, so do they.',
+  'fr.desc': 'A silly arcade racer where the characters sprint around the rim of a toilet in a 3D bathroom. I built a custom microphone-based sound-detection tool: while it picks up a sound, your character runs, and the moment it stops, so do they. I did not create the 3D models.',
   'fr.f1': 'Your character runs while the sound lasts and stops the moment it’s silent',
   'fr.f5': 'Singleplayer and multiplayer races',
   'fr.f2': '8 characters with distinct stats: fart boost and max speed',
@@ -49,7 +49,7 @@ const EN = {
   'fr.f4': 'Laps, race timer, live leaderboard and power-ups',
 
   'hoa.tagline': 'Where math is the sharpest sword.',
-  'hoa.desc': 'My own game, coming soon. An educational action-adventure set in a low-poly fantasy world: when you run into an enemy, you win the fight by drawing the answer to a math problem on screen, while the clock is ticking. The drawn numbers are recognized by an AI tool I built during my studies at University Mediterranean.',
+  'hoa.desc': 'My own game, coming soon. An educational action-adventure set in a low-poly fantasy world: when you run into an enemy, you win the fight by drawing the answer to a math problem on screen, while the clock is ticking. The drawn numbers are recognized by an AI tool I built during my studies at University Mediterranean. Multiplayer is also planned and will be added once there is a large enough player base.',
   'hoa.f1': 'Draw your answers on screen, and AI recognizes the handwritten numbers',
   'hoa.f5': 'Custom digit-recognition model, developed during my studies',
   'hoa.f6': 'Combat driven by timed math challenges',
@@ -65,10 +65,10 @@ const EN = {
   'ff.f3': 'Singleplayer and multiplayer three-minute matches',
 
   'mf.tagline': 'Sounds, pranks and mini-games in one app.',
-  'mf.desc': 'A mobile entertainment app that bundles a soundboard, pranks and mini-games into one package, with a full progression system that keeps users coming back. It’s live, constantly evolving, and I maintain it myself.',
-  'mf.f1': 'Soundboard with sound packs, a random mode and a Lab section',
+  'mf.desc': 'A mobile entertainment app with a sound-effects player, pranks and many mini-games, supported by a progression system that keeps users coming back. It’s live, constantly evolving, and I maintain it myself.',
+  'mf.f1': 'Sound-effects player with themed collections, random playback and a Lab section',
   'mf.f2': 'Six pranks: Fart Countdown, Silence Detect, Fake Call, Fake Calculator, Face Down and System Error',
-  'mf.f3': 'Built-in mini-games: Farts Lander, Top Farts and The Wellerman',
+  'mf.f3': 'Many mini-games, including Farts Lander, Top Farts and The Wellerman',
   'mf.f4': 'Levels, XP, streaks and coins to unlock content',
   'mf.f5': 'Continuous development and maintenance, all by me',
 
@@ -98,7 +98,6 @@ const EN = {
   'skill.speech': 'Speech recognition',
   'skill.digits': 'Handwritten digit recognition',
   'skill.predict': 'Predictive maintenance',
-  'skill.3d': '3D scenes & low-poly worlds',
   'skill.progression': 'Progression & in-game economy',
 
 
