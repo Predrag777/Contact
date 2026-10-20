@@ -27,7 +27,7 @@ const EN = {
 
   'proj.eyebrow': 'Featured projects',
   'proj.title': 'Four projects. One developer.',
-  'proj.lead': 'I develop Fart Runner, Frootz Fighters and Mr Farts App for Hugo FM, while Heroes of Alatyr is my own game, coming soon. My work includes game development and design, as well as AI tools for sound detection, speech recognition and handwritten digit recognition.',
+  'proj.lead': 'I develop Fart Runner, Frootz Fighters and Mr Farts App for Hugo FM, while Heroes of Alatyr is my own game, coming soon. My work includes game development and design, as well as AI tools for sound detection, speech recognition and computer vision.',
   'client.hugo': 'Made for Hugo FM',
   'client.own': 'My own game · coming soon',
   'solo': 'Solo · development & design',
@@ -35,7 +35,7 @@ const EN = {
   'features': 'Highlights',
   't.sound': 'AI sound detection',
   't.speech': 'AI speech recognition',
-  't.digits': 'AI digit recognition',
+  't.digits': 'AI computer vision',
   't.edu': 'Educational',
   't.minigames': 'Mini-games',
   't.progression': 'Progression',
@@ -50,8 +50,8 @@ const EN = {
 
   'hoa.tagline': 'Where math is the sharpest sword.',
   'hoa.desc': 'My own game, coming soon. An educational action-adventure set in a low-poly fantasy world: when you run into an enemy, you win the fight by drawing the answer to a math problem on screen, while the clock is ticking. The drawn numbers are recognized by an AI tool I built during my studies at University Mediterranean. Multiplayer is also planned and will be added once there is a large enough player base.',
-  'hoa.f1': 'Draw your answers on screen, and AI recognizes the handwritten numbers',
-  'hoa.f5': 'Custom digit-recognition model, developed during my studies',
+  'hoa.f1': 'Draw your answers on screen, and AI recognizes them using computer vision',
+  'hoa.f5': 'Custom computer-vision model, developed during my studies',
   'hoa.f6': 'Combat driven by timed math challenges',
   'hoa.f2': '9 heroes to unlock with in-game coins',
   'hoa.f3': 'Difficulty levels and two game modes: Singleplay and Arcade',
@@ -74,7 +74,7 @@ const EN = {
 
   'about.eyebrow': 'About me',
   'about.title': 'Engineer by training, game developer by calling.',
-  'about.lead': 'During my studies, I focused on building AI tools, from handwritten digit recognition to predicting failures on trains. Along the way, I became interested in game development, which is now my profession. I work in Unity and C#, take projects from idea to release, and add sound, voice or drawing controls to games.',
+  'about.lead': 'During my studies, I focused on building AI tools, including computer vision and predicting failures on trains. Along the way, I became interested in game development, which is now my profession. I work in Unity and C#, take projects from idea to release, and add sound, voice or drawing controls to games.',
   'exp.title': 'Experience',
   'exp.now': 'Now',
   'exp.d1': 'Working on numerous projects for Hugo FM, games and apps with AI features, including Fart Runner, Frootz Fighters and Mr Farts App.',
@@ -96,7 +96,7 @@ const EN = {
   'skill.ai': 'AI / machine learning',
   'skill.sound': 'Sound detection',
   'skill.speech': 'Speech recognition',
-  'skill.digits': 'Handwritten digit recognition',
+  'skill.digits': 'Computer vision',
   'skill.predict': 'Predictive maintenance',
   'skill.progression': 'Progression & in-game economy',
 
@@ -130,7 +130,7 @@ const EN = {
   /* ---------- Contact links ---------- */
   const contactBox = document.getElementById('contact-links');
   const contactDefs = [
-    { key: 'email', href: v => `mailto:${v}`, icon: 'i-mail', label: 'Pošalji email', i18n: 'contact.email', primary: true },
+    { key: 'email', href: v => `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(v)}`, icon: 'i-mail', label: 'Pošalji email', i18n: 'contact.email', primary: true },
     { key: 'phone', href: v => `tel:${v.replace(/[^+\d]/g, '')}`, icon: 'i-phone', label: v => v },
     { key: 'linkedin', href: v => v, icon: 'i-linkedin', label: 'LinkedIn' },
     { key: 'github', href: v => v, icon: 'i-github', label: 'GitHub' },
