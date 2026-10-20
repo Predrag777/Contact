@@ -21,7 +21,7 @@ const EN = {
   'hero.badge': 'Currently: Game Developer at Hugo FM',
   'hero.hello': 'Hi, I’m Predrag',
   'hero.title': 'I build games, from the first idea to the <span class="hl">final build</span>.',
-  'hero.lead': 'I hold two master’s degrees in Computer Science, from University Mediterranean in Montenegro and Mälardalen University in Sweden, and along the way I got hooked on building AI tools too. I’ve spent two years working professionally in game development and design, and I work on numerous projects for Hugo FM. I also regularly build my own AI models into games, for sound, speech and drawing recognition.',
+  'hero.lead': 'I hold two master’s degrees in Computer Science, from University Mediterranean in Montenegro and Mälardalen University in Sweden. During my studies, I focused on building AI tools and also became interested in game development. For the past two years, I’ve worked professionally in game development and design on projects for Hugo FM. I also build my own AI models into games for sound, speech and drawing recognition.',
   'hero.cta1': 'See my projects',
   'hero.cta2': 'Get in touch',
 
@@ -74,7 +74,7 @@ const EN = {
 
   'about.eyebrow': 'About me',
   'about.title': 'Engineer by training, game developer by calling.',
-  'about.lead': 'During my studies I mostly focused on building AI tools, from handwritten digit recognition to predicting failures on trains. Today I combine that knowledge with game development: I work in Unity and C#, own projects from idea to release, and give games something others don’t have, control by sound, voice or drawing.',
+  'about.lead': 'During my studies, I focused on building AI tools, from handwritten digit recognition to predicting failures on trains. Along the way, I became interested in game development, which is now my profession. I work in Unity and C#, take projects from idea to release, and add sound, voice or drawing controls to games.',
   'exp.title': 'Experience',
   'exp.now': 'Now',
   'exp.d1': 'Working on numerous projects for Hugo FM, games and apps with AI features, including Fart Runner, Frootz Fighters and Mr Farts App.',
@@ -85,7 +85,7 @@ const EN = {
   'exp.role3': 'AI tool for failure prediction',
   'exp.d3': 'I completed my master’s thesis in industry, at Alstom, where I built a tool for predicting failures on Alstom trains.',
   'edu.title': 'Education',
-  'edu.degree': 'Double Master’s Degree',
+  'edu.degree': 'Two Master’s Degrees',
   'edu.field': 'Computer Science · focus on AI tools',
   'edu.u1': 'University Mediterranean',
   'edu.u1loc': 'Podgorica, Montenegro',
