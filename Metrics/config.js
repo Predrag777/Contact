@@ -2,11 +2,11 @@
 // These values are public by design; access to the data is protected by database.rules.json.
 // While apiKey is empty the page only offers the demo data.
 export const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  appId: "",
+  apiKey: "AIzaSyAiC8QI6vo5Ri2zHcHckt_2sZJ8cAaSHI0",
+  authDomain: "heroes-of-alatyr-6b3da.firebaseapp.com",
+  databaseURL: "https://heroes-of-alatyr-6b3da-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "heroes-of-alatyr-6b3da",
+  appId: "1:245726883708:web:16355c0ea3da411231bef9",
 };
 
 // The login username is turned into this e-mail for Firebase Auth: "Predrag" -> predrag@example.com.
