@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "players": {
+      ".read": "auth != null && auth.token.email === 'predrag@example.com' && auth.token.firebase.sign_in_provider === 'password'",
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    }
+  }
+}

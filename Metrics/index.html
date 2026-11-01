@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="sr-Latn-ME">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metrika · Heroes of Alatyr</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0c14">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="metrics.css">
+</head>
+<body>
+
+  <!-- ---------- Login ---------- -->
+  <main class="login" id="login-view">
+    <form class="login-card" id="login-form" autocomplete="on" novalidate>
+      <a class="brand" href="../">
+        <img src="../img/heroes-icon.webp" width="256" height="256" alt="">
+        <span>Heroes of Alatyr <span class="muted">· Metrika</span></span>
+      </a>
+      <h1>Prijava</h1>
+      <p class="muted">Statistika igre uživo. Pristup samo uz nalog.</p>
+
+      <label class="field">
+        <span>Korisničko ime</span>
+        <input id="username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+      </label>
+      <label class="field">
+        <span>Šifra</span>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+      </label>
+
+      <p class="login-error" id="login-error" role="alert" hidden></p>
+
+      <button class="btn btn-primary" type="submit" id="login-btn">Prijavi se</button>
+
+      <div class="login-notice" id="config-notice" hidden>
+        <p><strong>Firebase još nije podešen.</strong> Upiši podatke projekta u <code>Metrics/config.js</code> da bi prijava i prave brojke proradile.</p>
+        <button class="btn btn-ghost" type="button" id="demo-btn">Pogledaj demo podatke</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- ---------- Dashboard ---------- -->
+  <div class="dash" id="dash-view" hidden>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="../">
+          <img src="../img/heroes-icon.webp" width="256" height="256" alt="">
+          <span>Heroes of Alatyr <span class="muted">· Metrika</span></span>
+        </a>
+        <div class="live" id="live" title="Podaci se ažuriraju sami čim igrači odigraju nešto">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="live-text">Povezivanje…</span>
+        </div>
+        <button class="btn btn-ghost btn-sm" type="button" id="logout-btn">Odjavi se</button>
+      </div>
+    </header>
+
+    <main class="container dash-main">
+      <p class="demo-banner" id="demo-banner" hidden>DEMO PODACI: izmišljeni brojevi samo za pregled izgleda. Prave brojke se vide kad se podesi Firebase.</p>
+
+      <div class="dash-head">
+        <div>
+          <h1>Pregled</h1>
+          <p class="muted" id="updated">&nbsp;</p>
+        </div>
+        <div class="segmented" role="group" aria-label="Period" id="period">
+          <button type="button" data-period="1">Danas</button>
+          <button type="button" data-period="7">7 dana</button>
+          <button type="button" data-period="30">30 dana</button>
+          <button type="button" data-period="0">Sve</button>
+        </div>
+      </div>
+
+      <section class="kpis" id="kpis" aria-label="Glavni brojevi"></section>
+
+      <nav class="jump" aria-label="Sekcije">
+        <a href="#s-levels">Nivoi</a>
+        <a href="#s-ads">Reklame</a>
+        <a href="#s-answers">Odgovori</a>
+        <a href="#s-days">Po danima</a>
+        <a href="#s-sessions">Broj sesija</a>
+        <a href="#s-players">Igrači</a>
+      </nav>
+
+      <section class="panel" id="s-levels">
+        <div class="panel-head">
+          <div>
+            <h2>Nivoi</h2>
+            <p class="muted">Od početka. „Igrači ovdje“ su oni kojima je ovo posljednji nivo na kojem su bili.</p>
+          </div>
+          <div class="toolbar" data-toolbar="levels"></div>
+        </div>
+        <div class="table-wrap" data-table="levels"></div>
+      </section>
+
+      <section class="panel" id="s-ads">
+        <div class="panel-head">
+          <div>
+            <h2>Reklame</h2>
+            <p class="muted">Od početka. Rewarded: „Pokrenuto“ je otvorena reklama, „Završeno“ odgledana do kraja uz nagradu.</p>
+          </div>
+          <div class="toolbar" data-toolbar="ads"></div>
+        </div>
+        <div class="table-wrap" data-table="ads"></div>
+      </section>
+
+      <section class="panel" id="s-answers">
+        <div class="panel-head">
+          <div>
+            <h2>Odgovori po izvoru</h2>
+            <p class="muted">Od početka. Gdje je igrač rješavao zadatak.</p>
+          </div>
+          <div class="toolbar" data-toolbar="answers"></div>
+        </div>
+        <div class="table-wrap" data-table="answers"></div>
+      </section>
+
+      <section class="panel" id="s-days">
+        <div class="panel-head">
+          <div>
+            <h2>Po danima</h2>
+            <p class="muted">Datumi po UTC vremenu, za izabrani period.</p>
+          </div>
+          <div class="toolbar" data-toolbar="days"></div>
+        </div>
+        <div class="table-wrap" data-table="days"></div>
+      </section>
+
+      <section class="panel" id="s-sessions">
+        <div class="panel-head">
+          <div>
+            <h2>Broj sesija po igraču</h2>
+            <p class="muted">Koliko puta su igrači otvorili igru. Pokazuje koliko se vraćaju.</p>
+          </div>
+          <div class="toolbar" data-toolbar="sessions"></div>
+        </div>
+        <div class="table-wrap" data-table="sessions"></div>
+      </section>
+
+      <section class="panel" id="s-players">
+        <div class="panel-head">
+          <div>
+            <h2>Igrači</h2>
+            <p class="muted" id="players-note">Igrači aktivni u izabranom periodu.</p>
+          </div>
+          <div class="toolbar" data-toolbar="players">
+            <input class="search" id="player-search" type="search" placeholder="Traži ID ili nivo" aria-label="Traži igrača">
+          </div>
+        </div>
+        <div class="table-wrap" data-table="players"></div>
+        <button class="btn btn-ghost btn-sm more" type="button" id="players-more" hidden>Prikaži još</button>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="metrics.js"></script>
+</body>
+</html>
