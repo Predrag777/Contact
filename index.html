@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Predrag, Unity Game Developer</title>
   <meta name="description" content="Predrag, Unity game developer u Hugo FM-u i autor igre Heroes of Alatyr, koja je izašla na Google Play-u. Dvije master diplome iz računarskih nauka i iskustvo u razvoju AI alata.">
-  <meta name="theme-color" content="#0a0c14">
+  <meta name="theme-color" content="#171717">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Predrag, Unity Game Developer">
@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2,family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,7 +27,6 @@
       <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
       <symbol id="i-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></symbol>
       <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="7 4 20 12 7 20 7 4"/></symbol>
-      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
       <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
       <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></symbol>
       <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></symbol>
@@ -46,7 +45,7 @@
   <a class="skip-link" href="#main" data-i18n="skip">Preskoči na sadržaj</a>
 
   <header class="nav" id="nav">
-    <div class="container nav-inner">
+    <div class="nav-bar">
       <a class="brand" href="#top" data-i18n-aria="nav.home" aria-label="Predrag, početak">
         <img src="img/dg-logo.webp" width="256" height="256" alt="">
         <span>Predrag</span>
@@ -56,9 +55,12 @@
         <a href="#o-meni" data-i18n="nav.about">O meni</a>
         <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
       </nav>
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="me" aria-pressed="true">ME</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <div class="nav-right">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="me" aria-pressed="true">ME</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn-primary btn-sm nav-cta" href="https://play.google.com/store/apps/details?id=com.dgdev.mathgame" target="_blank" rel="noopener" data-i18n="nav.cta">Preuzmi igru</a>
       </div>
     </div>
   </header>
@@ -66,88 +68,156 @@
   <main id="main">
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <a class="badge badge--release" href="#heroes-of-alatyr"><img class="badge-icon" src="img/heroes-icon.webp" width="480" height="480" alt=""><span data-i18n="hero.badge">Novo: Heroes of Alatyr je izašla</span></a>
-            <p class="hero-hello" data-i18n="hero.hello">Zdravo, ja sam Predrag, game developer u Hugo FM-u</p>
-            <h1 data-i18n="hero.title">Pravim igre, od ideje do <span class="hl">gotovog builda</span>.</h1>
-            <p class="hero-lead" data-i18n="hero.lead">Stekao sam dvije master diplome iz računarskih nauka, na Univerzitetu Mediteran i Mälardalen University u Švedskoj. Tokom studija fokusirao sam se na razvoj AI alata, a tada sam se zainteresovao i za razvoj igara. Već dvije godine profesionalno se bavim razvojem i dizajnom igara za Hugo FM. U igre često ugrađujem sopstvene AI modele za prepoznavanje zvuka, govora i crteža.</p>
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.dgdev.mathgame" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="hero.play">Preuzmi Heroes of Alatyr</span></a>
-              <a class="btn btn-ghost" href="#projekti" data-i18n="hero.cta1">Pogledaj projekte</a>
-              <a class="btn btn-ghost" href="#kontakt" data-i18n="hero.cta2">Kontakt</a>
-            </div>
-            <ul class="tech-line" data-i18n-aria="hero.tech" aria-label="Tehnologije">
-              <li>Unity</li><li>C#</li><li>AI</li><li>Game design</li><li>Mobile · Desktop · Web</li>
-            </ul>
-          </div>
+      <div class="hero-scene hero-scene--hoa is-active" data-scene="hoa">
+        <img class="scene-bg" src="img/hero-hoa-bg.webp" alt="">
+        <img class="scene-art scene-art--square" src="img/hero-hoa.webp" width="1254" height="1254" alt="" fetchpriority="high">
+        <div class="scene-shade"></div>
+      </div>
+      <div class="hero-scene hero-scene--mf" data-scene="mf">
+        <img class="scene-bg" src="img/hero-mf-bg.webp" alt="">
+        <div class="scene-phones">
+          <img src="img/mrfarts-games.webp" width="720" height="1123" alt="">
+          <img src="img/mrfarts-home.webp" width="720" height="1123" alt="">
+          <img src="img/mrfarts-pranks.webp" width="720" height="1123" alt="">
+        </div>
+        <div class="scene-shade"></div>
+      </div>
+      <div class="hero-scene hero-scene--fr" data-scene="fr">
+        <img class="scene-bg" src="img/hero-fr-bg.webp" alt="">
+        <img class="scene-art scene-art--wide" src="img/hero-fr.webp" width="1340" height="826" alt="">
+        <div class="scene-shade"></div>
+      </div>
+      <div class="hero-scene hero-scene--ff" data-scene="ff">
+        <img class="scene-bg" src="img/hero-ff-bg.webp" alt="">
+        <img class="scene-art scene-art--wide" src="img/hero-ff.webp" width="1380" height="725" alt="">
+        <div class="scene-shade"></div>
+      </div>
 
-          <div class="hero-visual reveal">
-            <div class="portrait">
-              <div class="portrait-frame">
-                <img src="Assets/myImage2.png" width="1536" height="1024" alt="Predrag at a tech conference" fetchpriority="high">
-              </div>
-              <img class="float-icon" src="img/dg-logo.webp" width="256" height="256" alt="DG Development">
-              <div class="float-chip float-chip--a"><span class="chip-dot" aria-hidden="true"></span>Unity</div>
-              <div class="float-chip float-chip--b"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>Solo dev</div>
-            </div>
+      <div class="hero-content">
+        <div class="hero-tabs" role="tablist" data-i18n-aria="hero.tabs" aria-label="Moje igre">
+          <button class="hero-tab is-active" type="button" role="tab" id="tab-hoa" data-game="hoa" aria-controls="panel-hoa" aria-selected="true"><span class="emblem"><img src="img/emblem-hoa.webp" width="220" height="220" alt=""></span><span class="sr-only">Heroes of Alatyr</span></button>
+          <button class="hero-tab" type="button" role="tab" id="tab-mf" data-game="mf" aria-controls="panel-mf" aria-selected="false" tabindex="-1"><span class="emblem"><img src="img/emblem-mf.webp" width="220" height="220" alt=""></span><span class="sr-only">Mr Farts App</span></button>
+          <button class="hero-tab" type="button" role="tab" id="tab-fr" data-game="fr" aria-controls="panel-fr" aria-selected="false" tabindex="-1"><span class="emblem"><img src="img/emblem-fr.webp" width="220" height="220" alt=""></span><span class="sr-only">Fart Runner</span></button>
+          <button class="hero-tab" type="button" role="tab" id="tab-ff" data-game="ff" aria-controls="panel-ff" aria-selected="false" tabindex="-1"><span class="emblem"><img src="img/emblem-ff.webp" width="220" height="220" alt=""></span><span class="sr-only">Frootz Fighters</span></button>
+        </div>
+
+        <div class="hero-panel" id="panel-hoa" role="tabpanel" aria-labelledby="tab-hoa" data-panel="hoa">
+          <p class="eyebrow" data-i18n="hero.hoa.eyebrow">Moja nova igra</p>
+          <h1 class="hero-title" data-i18n="hero.hoa.title">Heroes of Alatyr je izašla</h1>
+          <p class="hero-lead" data-i18n="hero.hoa.lead">Edukativna avantura u kojoj protivnike pobjeđuješ tako što rješenje matematičkog zadatka nacrtaš na ekranu.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.dgdev.mathgame" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="release.cta">Preuzmi na Google Play</span></a>
+            <a class="btn btn-ghost" href="#heroes-of-alatyr" data-i18n="hero.more">Više o igri</a>
           </div>
+          <p class="hero-avail"><span data-i18n="hero.avail">Dostupno za Android</span></p>
+        </div>
+
+        <div class="hero-panel" id="panel-mf" role="tabpanel" aria-labelledby="tab-mf" data-panel="mf" hidden>
+          <p class="eyebrow" data-i18n="client.hugo">Razvijeno za Hugo FM</p>
+          <h2 class="hero-title">Mr Farts App</h2>
+          <p class="hero-lead" data-i18n="mf.tagline">Zvuci, šale i mini-igre u jednoj aplikaciji.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#mr-farts" data-i18n="hero.view">Pogledaj projekat</a></div>
+          <p class="hero-avail" data-i18n="client.live">Dostupna · stalno se razvija</p>
+        </div>
+
+        <div class="hero-panel" id="panel-fr" role="tabpanel" aria-labelledby="tab-fr" data-panel="fr" hidden>
+          <p class="eyebrow" data-i18n="client.hugo">Razvijeno za Hugo FM</p>
+          <h2 class="hero-title">Fart Runner</h2>
+          <p class="hero-lead" data-i18n="fr.tagline">Trka u kojoj pobjeđuje najglasniji.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#fart-runner" data-i18n="hero.view">Pogledaj projekat</a></div>
+        </div>
+
+        <div class="hero-panel" id="panel-ff" role="tabpanel" aria-labelledby="tab-ff" data-panel="ff" hidden>
+          <p class="eyebrow" data-i18n="client.hugo">Razvijeno za Hugo FM</p>
+          <h2 class="hero-title">Frootz Fighters</h2>
+          <p class="hero-lead" data-i18n="ff.tagline">Vanzemaljci, voće i haos na planeti.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#frootz-fighters" data-i18n="hero.view">Pogledaj projekat</a></div>
         </div>
       </div>
     </section>
+    <div class="rivets" aria-hidden="true"></div>
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="section" id="projekti">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow" data-i18n="proj.eyebrow">Izdvojeni projekti</p>
-          <h2 data-i18n="proj.title">Četiri projekta. Jedan developer.</h2>
-          <p data-i18n="proj.lead">Za Hugo FM razvijam Fart Runner, Frootz Fighters i Mr Farts App, a Heroes of Alatyr je moja igra, koju već možeš preuzeti na Google <span class="nowrap">Play-u</span>. Bavim se razvojem igara i dizajnom, kao i AI alatima za detekciju zvuka, prepoznavanje govora i kompjutersku viziju.</p>
-        </header>
-
-        <article class="project project--released reveal" id="heroes-of-alatyr" style="--p:#3d8bff; --p2:#ffc233">
-          <header class="project-head">
-            <span class="project-num">01</span>
-            <div class="project-id project-id--icon">
-              <img class="project-icon" src="img/heroes-icon.webp" width="480" height="480" alt="Heroes of Alatyr icon" loading="lazy">
-              <div>
-                <h3 class="project-title">Heroes of Alatyr</h3>
-                <p class="project-tagline" data-i18n="hoa.tagline">Matematika kao najoštriji mač.</p>
-              </div>
+    <div class="stone">
+      <!-- ============ INTRO ============ -->
+      <section class="section" id="predrag">
+        <div class="container">
+          <header class="section-head reveal">
+            <div class="section-name">
+              <span class="crest" aria-hidden="true">P</span>
+              <h2 data-i18n="hero.hello">Zdravo, ja sam Predrag</h2>
             </div>
-            <ul class="tags">
-              <li>Unity</li><li>Mobile</li><li data-i18n="t.edu">Edukativna igra</li><li data-i18n="t.digits">AI kompjuterska vizija</li>
-            </ul>
+            <div class="section-links">
+              <a class="link-arrow" href="#projekti"><span data-i18n="hero.cta1">Pogledaj projekte</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="link-arrow" href="#kontakt"><span data-i18n="hero.cta2">Kontakt</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
           </header>
 
-          <div class="release-bar">
-            <div class="release-copy">
-              <p class="release-title"><span class="pulse" aria-hidden="true"></span><span data-i18n="release.title">Heroes of Alatyr je izašla</span></p>
-              <p class="release-sub" data-i18n="release.sub">Igra je na Google <span class="nowrap">Play-u</span> i možeš je odmah preuzeti.</p>
+          <div class="pane reveal">
+            <div class="pane-copy">
+              <p class="eyebrow" data-i18n="intro.badge">Trenutno: Game Developer u Hugo FM-u</p>
+              <h3 class="pane-title" data-i18n="hero.title">Pravim igre, od ideje do <span class="hl">gotovog builda</span>.</h3>
+              <p data-i18n="hero.lead">Stekao sam dvije master diplome iz računarskih nauka, na Univerzitetu Mediteran i Mälardalen University u Švedskoj. Tokom studija fokusirao sam se na razvoj AI alata, a tada sam se zainteresovao i za razvoj igara. Već dvije godine profesionalno se bavim razvojem i dizajnom igara za Hugo FM. U igre često ugrađujem sopstvene AI modele za prepoznavanje zvuka, govora i crteža.</p>
+              <ul class="tech-line" data-i18n-aria="hero.tech" aria-label="Tehnologije">
+                <li>Unity</li><li>C#</li><li>AI</li><li>Game design</li><li>Mobile · Desktop · Web</li>
+              </ul>
+              <a class="link-arrow pane-link" href="#o-meni"><span data-i18n="nav.about">O meni</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.dgdev.mathgame" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="release.cta">Preuzmi na Google Play</span></a>
-          </div>
-
-          <div class="gallery" data-gallery>
-            <div class="gallery-main">
-              <img src="img/heroes-camp.webp" width="1600" height="738" alt="Heroes of Alatyr, main menu" loading="lazy" decoding="async">
-              <button class="gallery-open" type="button" data-i18n-aria="gal.open" aria-label="Otvori u punoj veličini"><span class="zoom-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
-            </div>
-            <div class="thumbs">
-              <button class="thumb" type="button" data-src="img/heroes-camp.webp" data-alt="Heroes of Alatyr, main menu" aria-label="Heroes of Alatyr, main menu"><img src="img/heroes-camp-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-              <button class="thumb" type="button" data-src="img/heroes-select.webp" data-alt="Heroes of Alatyr, hero selection" aria-label="Heroes of Alatyr, hero selection"><img src="img/heroes-select-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-              <button class="thumb" type="button" data-src="img/heroes-explore.webp" data-alt="Heroes of Alatyr, exploration" aria-label="Heroes of Alatyr, exploration"><img src="img/heroes-explore-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-              <button class="thumb" type="button" data-src="img/heroes-battle.webp" data-alt="Heroes of Alatyr, math battle" aria-label="Heroes of Alatyr, math battle"><img src="img/heroes-battle-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+            <div class="pane-media">
+              <img class="pane-photo" src="img/predrag-conf.webp" width="1400" height="933" alt="Predrag at a tech conference" loading="lazy">
+              <span class="pane-sticker emblem"><img src="img/dg-logo.webp" width="256" height="256" alt="DG Development" loading="lazy"></span>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="project-body">
-            <div class="project-desc">
-              <p data-i18n="hoa.desc">Moja igra, sada dostupna na Google <span class="nowrap">Play-u</span>. Edukativna akciona avantura smještena u low-poly fantasy svijetu: kad naiđeš na protivnika, borbu dobijaš tako što nacrtaš rješenje matematičkog zadatka na ekranu, dok sat otkucava. Nacrtane brojeve prepoznaje AI alat koji sam razvio tokom studija na Univerzitetu Mediteran. Multiplayer je takođe u planu, a biće dostupan kada se okupi dovoljna baza igrača.</p>
-              <div class="badges"><span class="solo"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="solo">Solo · razvoj i dizajn</span></span><span class="client client--own"><span class="pulse" aria-hidden="true"></span><span data-i18n="client.own">Moja igra · izašla</span></span></div>
+      <!-- ============ PROJECTS ============ -->
+      <section class="section section--tight" id="projekti">
+        <div class="container">
+          <header class="section-head section-head--stack reveal">
+            <div class="section-name">
+              <span class="crest" aria-hidden="true">P</span>
+              <div>
+                <p class="eyebrow" data-i18n="proj.eyebrow">Izdvojeni projekti</p>
+                <h2 data-i18n="proj.title">Četiri projekta. Jedan developer.</h2>
+              </div>
             </div>
-            <div>
+            <p class="section-lead" data-i18n="proj.lead">Za Hugo FM razvijam Fart Runner, Frootz Fighters i Mr Farts App, a Heroes of Alatyr je moja igra, koju već možeš preuzeti na Google <span class="nowrap">Play-u</span>. Bavim se razvojem igara i dizajnom, kao i AI alatima za detekciju zvuka, prepoznavanje govora i kompjutersku viziju.</p>
+          </header>
+
+          <article class="project project--featured reveal" id="heroes-of-alatyr">
+            <div class="project-main">
+              <div class="project-copy">
+                <p class="eyebrow eyebrow--live"><span class="pulse" aria-hidden="true"></span><span data-i18n="client.own">Moja igra · dostupna na Google <span class="nowrap">Play-u</span></span></p>
+                <div class="project-name">
+                  <img class="project-icon" src="img/heroes-icon.webp" width="480" height="480" alt="Heroes of Alatyr icon" loading="lazy">
+                  <div>
+                    <h3 class="project-title">Heroes of Alatyr</h3>
+                    <p class="project-tagline" data-i18n="hoa.tagline">Matematika kao najoštriji mač.</p>
+                  </div>
+                </div>
+                <p class="project-desc" data-i18n="hoa.desc">Moja igra, sada dostupna na Google <span class="nowrap">Play-u</span>. Edukativna akciona avantura smještena u low-poly fantasy svijetu: kad naiđeš na protivnika, borbu dobijaš tako što nacrtaš rješenje matematičkog zadatka na ekranu, dok sat otkucava. Nacrtane brojeve prepoznaje AI alat koji sam razvio tokom studija na Univerzitetu Mediteran. Multiplayer je takođe u planu, a biće dostupan kada se okupi dovoljna baza igrača.</p>
+                <a class="btn btn-primary project-cta" href="https://play.google.com/store/apps/details?id=com.dgdev.mathgame" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="release.cta">Preuzmi na Google Play</span></a>
+                <ul class="tags">
+                  <li>Unity</li><li>Mobile</li><li data-i18n="t.edu">Edukativna igra</li><li data-i18n="t.digits">AI kompjuterska vizija</li>
+                </ul>
+                <p class="project-credit"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="solo">Solo · razvoj i dizajn</span></p>
+              </div>
+
+              <div class="gallery" data-gallery>
+                <div class="gallery-main">
+                  <img src="img/heroes-camp.webp" width="1600" height="738" alt="Heroes of Alatyr, main menu" loading="lazy" decoding="async">
+                  <button class="gallery-open" type="button" data-i18n-aria="gal.open" aria-label="Otvori u punoj veličini"><span class="zoom-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
+                </div>
+                <div class="thumbs">
+                  <button class="thumb" type="button" data-src="img/heroes-camp.webp" data-alt="Heroes of Alatyr, main menu" aria-label="Heroes of Alatyr, main menu"><img src="img/heroes-camp-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                  <button class="thumb" type="button" data-src="img/heroes-select.webp" data-alt="Heroes of Alatyr, hero selection" aria-label="Heroes of Alatyr, hero selection"><img src="img/heroes-select-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                  <button class="thumb" type="button" data-src="img/heroes-explore.webp" data-alt="Heroes of Alatyr, exploration" aria-label="Heroes of Alatyr, exploration"><img src="img/heroes-explore-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                  <button class="thumb" type="button" data-src="img/heroes-battle.webp" data-alt="Heroes of Alatyr, math battle" aria-label="Heroes of Alatyr, math battle"><img src="img/heroes-battle-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-features">
               <h4 class="features-title" data-i18n="features">Ključne mogućnosti</h4>
               <ul class="features">
                 <li data-i18n="hoa.f1">Odgovore crtaš na ekranu, a AI ih prepoznaje pomoću kompjuterske vizije</li>
@@ -157,23 +227,28 @@
                 <li data-i18n="hoa.f3">Nivoi težine i dva moda igre: Singleplay i Arcade</li>
               </ul>
             </div>
-          </div>
-        </article>
-        <article class="project project--phones reveal" id="mr-farts" style="--p:#ff5a3c; --p2:#ffb224">
-          <header class="project-head">
-            <span class="project-num">02</span>
-            <div class="project-id">
-              <h3 class="project-title">Mr Farts App</h3>
-              <p class="project-tagline" data-i18n="mf.tagline">Zvuci, šale i mini-igre u jednoj aplikaciji.</p>
-            </div>
-            <ul class="tags">
-              <li>Unity</li><li>Mobile</li><li data-i18n="t.minigames">Mini-igre</li><li data-i18n="t.progression">Progresija</li>
-            </ul>
-          </header>
+          </article>
 
-          <div class="phones-layout">
-            <div class="project-desc">
-              <p data-i18n="mf.desc">Mobilna zabavna aplikacija sa plejerom zvučnih efekata, šalama i brojnim mini-igrama, uz sistem progresije koji korisnike motiviše da se vraćaju. Dostupna je korisnicima, stalno je unapređujem i sam je održavam.</p>
+          <article class="project project--phones project--flip reveal" id="mr-farts">
+            <div class="project-main">
+              <div class="project-copy">
+                <p class="eyebrow" data-i18n="client.hugo">Razvijeno za Hugo FM</p>
+                <h3 class="project-title">Mr Farts App</h3>
+                <p class="project-tagline" data-i18n="mf.tagline">Zvuci, šale i mini-igre u jednoj aplikaciji.</p>
+                <p class="project-desc" data-i18n="mf.desc">Mobilna zabavna aplikacija sa plejerom zvučnih efekata, šalama i brojnim mini-igrama, uz sistem progresije koji korisnike motiviše da se vraćaju. Dostupna je korisnicima, stalno je unapređujem i sam je održavam.</p>
+                <ul class="tags">
+                  <li>Unity</li><li>Mobile</li><li data-i18n="t.minigames">Mini-igre</li><li data-i18n="t.progression">Progresija</li>
+                </ul>
+                <p class="project-credit"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="solo">Solo · razvoj i dizajn</span></p>
+                <p class="project-credit project-credit--live"><span class="pulse" aria-hidden="true"></span><span data-i18n="client.live">Dostupna · stalno se razvija</span></p>
+              </div>
+              <div class="phones" data-gallery="phones">
+                <button class="phone" type="button" data-src="img/mrfarts-home.webp" data-alt="Mr Farts App, home screen" aria-label="Mr Farts App, home screen"><img src="img/mrfarts-home.webp" width="720" height="1123" alt="" loading="lazy"></button>
+                <button class="phone" type="button" data-src="img/mrfarts-games.webp" data-alt="Mr Farts App, mini-games" aria-label="Mr Farts App, mini-games"><img src="img/mrfarts-games.webp" width="720" height="1123" alt="" loading="lazy"></button>
+                <button class="phone" type="button" data-src="img/mrfarts-pranks.webp" data-alt="Mr Farts App, pranks" aria-label="Mr Farts App, pranks"><img src="img/mrfarts-pranks.webp" width="720" height="1123" alt="" loading="lazy"></button>
+              </div>
+            </div>
+            <div class="project-features">
               <h4 class="features-title" data-i18n="features">Ključne mogućnosti</h4>
               <ul class="features">
                 <li data-i18n="mf.f1">Plejer zvučnih efekata sa tematskim kolekcijama, nasumičnim puštanjem i Lab sekcijom</li>
@@ -182,46 +257,35 @@
                 <li data-i18n="mf.f4">Nivoi, XP, streak-ovi i novčići za otključavanje sadržaja</li>
                 <li data-i18n="mf.f5">Kontinuirani razvoj i održavanje, sve radim sam</li>
               </ul>
-              <div class="badges"><span class="solo"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="solo">Solo · razvoj i dizajn</span></span><span class="client"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg><span data-i18n="client.hugo">Razvijeno za Hugo FM</span></span><span class="client client--own"><span class="pulse" aria-hidden="true"></span><span data-i18n="client.live">Dostupna · stalno se razvija</span></span></div>
             </div>
-            <div class="phones" data-gallery="phones">
-              <button class="phone" type="button" data-src="img/mrfarts-home.webp" data-alt="Mr Farts App, home screen" aria-label="Mr Farts App, home screen"><img src="img/mrfarts-home.webp" width="720" height="1123" alt="" loading="lazy"></button>
-              <button class="phone" type="button" data-src="img/mrfarts-games.webp" data-alt="Mr Farts App, mini-games" aria-label="Mr Farts App, mini-games"><img src="img/mrfarts-games.webp" width="720" height="1123" alt="" loading="lazy"></button>
-              <button class="phone" type="button" data-src="img/mrfarts-pranks.webp" data-alt="Mr Farts App, pranks" aria-label="Mr Farts App, pranks"><img src="img/mrfarts-pranks.webp" width="720" height="1123" alt="" loading="lazy"></button>
-            </div>
-          </div>
-        </article>
-        <article class="project reveal" id="fart-runner" style="--p:#ff9f2e; --p2:#6bd34a">
-          <header class="project-head">
-            <span class="project-num">03</span>
-            <div class="project-id">
-              <h3 class="project-title">Fart Runner</h3>
-              <p class="project-tagline" data-i18n="fr.tagline">Trka u kojoj pobjeđuje najglasniji.</p>
-            </div>
-            <ul class="tags">
-              <li>Unity</li><li>Mobile</li><li>Multiplayer</li><li data-i18n="t.sound">AI detekcija zvuka</li>
-            </ul>
-          </header>
+          </article>
 
-          <div class="gallery" data-gallery>
-            <div class="gallery-main">
-              <img src="img/fart-runner-title.webp" width="1600" height="738" alt="Fart Runner, main menu" loading="lazy" decoding="async">
-              <button class="gallery-open" type="button" data-i18n-aria="gal.open" aria-label="Otvori u punoj veličini"><span class="zoom-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
+          <article class="project reveal" id="fart-runner">
+            <div class="project-main">
+              <div class="project-copy">
+                <p class="eyebrow" data-i18n="client.hugo">Razvijeno za Hugo FM</p>
+                <h3 class="project-title">Fart Runner</h3>
+                <p class="project-tagline" data-i18n="fr.tagline">Trka u kojoj pobjeđuje najglasniji.</p>
+                <p class="project-desc" data-i18n="fr.desc">Šašava arkadna trka u kojoj se likovi utrkuju po ivici WC šolje, u 3D kupatilu. Razvio sam sopstveni alat za detekciju zvuka preko mikrofona: dok traje zvuk, tvoj lik trči, a čim utihne, zaustavlja se. 3D modele za igru nisam radio ja.</p>
+                <ul class="tags">
+                  <li>Unity</li><li>Mobile</li><li>Multiplayer</li><li data-i18n="t.sound">AI detekcija zvuka</li>
+                </ul>
+                <p class="project-credit"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="solo">Solo · razvoj i dizajn</span></p>
+              </div>
+              <div class="gallery" data-gallery>
+                <div class="gallery-main">
+                  <img src="img/fart-runner-title.webp" width="1600" height="738" alt="Fart Runner, main menu" loading="lazy" decoding="async">
+                  <button class="gallery-open" type="button" data-i18n-aria="gal.open" aria-label="Otvori u punoj veličini"><span class="zoom-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
+                </div>
+                <div class="thumbs">
+                  <button class="thumb" type="button" data-src="img/fart-runner-title.webp" data-alt="Fart Runner, main menu" aria-label="Fart Runner, main menu"><img src="img/fart-runner-title-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                  <button class="thumb" type="button" data-src="img/fart-runner-select.webp" data-alt="Fart Runner, character selection" aria-label="Fart Runner, character selection"><img src="img/fart-runner-select-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                  <button class="thumb" type="button" data-src="img/fart-runner-bathroom.webp" data-alt="Fart Runner, bathroom track" aria-label="Fart Runner, bathroom track"><img src="img/fart-runner-bathroom-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                  <button class="thumb" type="button" data-src="img/fart-runner-race.webp" data-alt="Fart Runner, race gameplay" aria-label="Fart Runner, race gameplay"><img src="img/fart-runner-race-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                </div>
+              </div>
             </div>
-            <div class="thumbs">
-              <button class="thumb" type="button" data-src="img/fart-runner-title.webp" data-alt="Fart Runner, main menu" aria-label="Fart Runner, main menu"><img src="img/fart-runner-title-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-              <button class="thumb" type="button" data-src="img/fart-runner-select.webp" data-alt="Fart Runner, character selection" aria-label="Fart Runner, character selection"><img src="img/fart-runner-select-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-              <button class="thumb" type="button" data-src="img/fart-runner-bathroom.webp" data-alt="Fart Runner, bathroom track" aria-label="Fart Runner, bathroom track"><img src="img/fart-runner-bathroom-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-              <button class="thumb" type="button" data-src="img/fart-runner-race.webp" data-alt="Fart Runner, race gameplay" aria-label="Fart Runner, race gameplay"><img src="img/fart-runner-race-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-            </div>
-          </div>
-
-          <div class="project-body">
-            <div class="project-desc">
-              <p data-i18n="fr.desc">Šašava arkadna trka u kojoj se likovi utrkuju po ivici WC šolje, u 3D kupatilu. Razvio sam sopstveni alat za detekciju zvuka preko mikrofona: dok traje zvuk, tvoj lik trči, a čim utihne, zaustavlja se. 3D modele za igru nisam radio ja.</p>
-              <div class="badges"><span class="solo"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="solo">Solo · razvoj i dizajn</span></span><span class="client"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg><span data-i18n="client.hugo">Razvijeno za Hugo FM</span></span></div>
-            </div>
-            <div>
+            <div class="project-features">
               <h4 class="features-title" data-i18n="features">Ključne mogućnosti</h4>
               <ul class="features">
                 <li data-i18n="fr.f1">Lik trči dok traje zvuk, a staje čim zvuka nema</li>
@@ -231,39 +295,34 @@
                 <li data-i18n="fr.f4">Krugovi, štoperica, tabela poretka uživo i power-up predmeti</li>
               </ul>
             </div>
-          </div>
-        </article>
-        <article class="project reveal" id="frootz-fighters" style="--p:#b44dff; --p2:#ff4da6">
-          <header class="project-head">
-            <span class="project-num">04</span>
-            <div class="project-id">
-              <h3 class="project-title">Frootz Fighters</h3>
-              <p class="project-tagline" data-i18n="ff.tagline">Vanzemaljci, voće i haos na planeti.</p>
-            </div>
-            <ul class="tags">
-              <li>Unity</li><li>Mobile</li><li>Shooter</li><li data-i18n="t.speech">AI prepoznavanje govora</li>
-            </ul>
-          </header>
+          </article>
 
-          <div class="gallery" data-gallery>
-            <div class="gallery-main">
-              <img src="img/frootz-title.webp" width="1600" height="738" alt="Frootz Fighters, main menu" loading="lazy" decoding="async">
-              <button class="gallery-open" type="button" data-i18n-aria="gal.open" aria-label="Otvori u punoj veličini"><span class="zoom-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
+          <article class="project project--flip reveal" id="frootz-fighters">
+            <div class="project-main">
+              <div class="project-copy">
+                <p class="eyebrow" data-i18n="client.hugo">Razvijeno za Hugo FM</p>
+                <h3 class="project-title">Frootz Fighters</h3>
+                <p class="project-tagline" data-i18n="ff.tagline">Vanzemaljci, voće i haos na planeti.</p>
+                <p class="project-desc" data-i18n="ff.desc">Šarena sci-fi pucačina na vanzemaljskim planetama. Skupljaš voće razbacano po planeti, a pucaš tako što izvikneš ime voća koje si sakupio, dok moj AI prepoznaje šta si izabrao. Mečevi traju tri minuta, sam ili protiv drugih igrača.</p>
+                <ul class="tags">
+                  <li>Unity</li><li>Mobile</li><li>Shooter</li><li data-i18n="t.speech">AI prepoznavanje govora</li>
+                </ul>
+                <p class="project-credit"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="solo">Solo · razvoj i dizajn</span></p>
+              </div>
+              <div class="gallery" data-gallery>
+                <div class="gallery-main">
+                  <img src="img/frootz-title.webp" width="1600" height="738" alt="Frootz Fighters, main menu" loading="lazy" decoding="async">
+                  <button class="gallery-open" type="button" data-i18n-aria="gal.open" aria-label="Otvori u punoj veličini"><span class="zoom-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
+                </div>
+                <div class="thumbs">
+                  <button class="thumb" type="button" data-src="img/frootz-title.webp" data-alt="Frootz Fighters, main menu" aria-label="Frootz Fighters, main menu"><img src="img/frootz-title-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                  <button class="thumb thumb--video" type="button" data-type="video" data-src="media/frootz-fighters.mp4" data-poster="img/frootz-gameplay.webp" data-alt="Frootz Fighters, gameplay video" aria-label="Frootz Fighters, gameplay video"><img src="img/frootz-gameplay-thumb.webp" width="400" height="185" alt="" loading="lazy"><span class="play-badge" aria-hidden="true"><svg class="icon"><use href="#i-play"/></svg></span></button>
+                  <button class="thumb" type="button" data-src="img/frootz-select.webp" data-alt="Frootz Fighters, alien selection" aria-label="Frootz Fighters, alien selection"><img src="img/frootz-select-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                  <button class="thumb" type="button" data-src="img/frootz-gameplay.webp" data-alt="Frootz Fighters, match countdown" aria-label="Frootz Fighters, match countdown"><img src="img/frootz-gameplay-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
+                </div>
+              </div>
             </div>
-            <div class="thumbs">
-              <button class="thumb" type="button" data-src="img/frootz-title.webp" data-alt="Frootz Fighters, main menu" aria-label="Frootz Fighters, main menu"><img src="img/frootz-title-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-              <button class="thumb thumb--video" type="button" data-type="video" data-src="media/frootz-fighters.mp4" data-poster="img/frootz-gameplay.webp" data-alt="Frootz Fighters, gameplay video" aria-label="Frootz Fighters, gameplay video"><img src="img/frootz-gameplay-thumb.webp" width="400" height="185" alt="" loading="lazy"><span class="play-badge" aria-hidden="true"><svg class="icon"><use href="#i-play"/></svg></span></button>
-              <button class="thumb" type="button" data-src="img/frootz-select.webp" data-alt="Frootz Fighters, alien selection" aria-label="Frootz Fighters, alien selection"><img src="img/frootz-select-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-              <button class="thumb" type="button" data-src="img/frootz-gameplay.webp" data-alt="Frootz Fighters, match countdown" aria-label="Frootz Fighters, match countdown"><img src="img/frootz-gameplay-thumb.webp" width="400" height="185" alt="" loading="lazy"></button>
-            </div>
-          </div>
-
-          <div class="project-body">
-            <div class="project-desc">
-              <p data-i18n="ff.desc">Šarena sci-fi pucačina na vanzemaljskim planetama. Skupljaš voće razbacano po planeti, a pucaš tako što izvikneš ime voća koje si sakupio, dok moj AI prepoznaje šta si izabrao. Mečevi traju tri minuta, sam ili protiv drugih igrača.</p>
-              <div class="badges"><span class="solo"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="solo">Solo · razvoj i dizajn</span></span><span class="client"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg><span data-i18n="client.hugo">Razvijeno za Hugo FM</span></span></div>
-            </div>
-            <div>
+            <div class="project-features">
               <h4 class="features-title" data-i18n="features">Ključne mogućnosti</h4>
               <ul class="features">
                 <li data-i18n="ff.f5">Pucanje glasom, izvikneš ime sakupljenog voća</li>
@@ -273,121 +332,156 @@
                 <li data-i18n="ff.f3">Singleplayer i multiplayer mečevi od 3 minuta</li>
               </ul>
             </div>
-          </div>
-        </article>
-      </div>
-    </section>
+          </article>
+        </div>
+      </section>
 
-    <!-- ============ ABOUT / EXPERIENCE ============ -->
-    <section class="section section--alt" id="o-meni">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow" data-i18n="about.eyebrow">O meni</p>
-          <h2 data-i18n="about.title">Inženjer po obrazovanju, game developer po pozivu.</h2>
-          <p data-i18n="about.lead">Tokom studija fokusirao sam se na razvoj AI alata, uključujući kompjutersku viziju i predikciju kvarova na vozovima. Usput sam se zainteresovao za razvoj igara, kojim se danas profesionalno bavim. Radim u Unity-ju i C#-u, vodim projekte od ideje do objave i dodajem im upravljanje zvukom, glasom ili crtežom.</p>
-        </header>
-
-        <div class="about-grid">
-          <div class="card reveal">
-            <h3 class="card-title"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></span><span data-i18n="exp.title">Iskustvo</span></h3>
-            <ol class="timeline">
-              <li>
-                <span class="tl-when tl-when--now" data-i18n="exp.now">Trenutno</span>
-                <div>
-                  <h4>Game Developer</h4>
-                  <p class="tl-org">Hugo FM</p>
-                  <p data-i18n="exp.d1">Radim na brojnim projektima za Hugo FM, igrama i aplikacijama sa AI funkcionalnostima, među kojima su Fart Runner, Frootz Fighters i Mr Farts App.</p>
-                </div>
-              </li>
-              <li>
-                <span class="tl-when" data-i18n="exp.yrs">2 godine</span>
-                <div>
-                  <h4 data-i18n="exp.role2">Game development i dizajn</h4>
-                  <p class="tl-org">Unity · C#</p>
-                  <p data-i18n="exp.d2">Dizajn i razvoj igara za mobilne uređaje, desktop i web.</p>
-                </div>
-              </li>
-              <li>
-                <span class="tl-when" data-i18n="exp.thesis">Master teza</span>
-                <div>
-                  <h4 data-i18n="exp.role3">AI alat za predikciju kvarova</h4>
-                  <p class="tl-org">Alstom</p>
-                  <p data-i18n="exp.d3">Master tezu sam odradio u industriji, u firmi Alstom, gdje sam razvio alat za predikciju kvarova na Alstom vozovima.</p>
-                </div>
-              </li>
-            </ol>
+      <!-- ============ ABOUT ============ -->
+      <section class="section section--tight" id="o-meni">
+        <div class="container">
+          <div class="tabs reveal" role="tablist" data-i18n-aria="about.eyebrow" aria-label="O meni">
+            <button class="tab is-active" type="button" role="tab" id="tab-exp" data-tab="exp" aria-controls="panel-exp" aria-selected="true" data-i18n="exp.title">Iskustvo</button>
+            <button class="tab" type="button" role="tab" id="tab-edu" data-tab="edu" aria-controls="panel-edu" aria-selected="false" tabindex="-1" data-i18n="edu.title">Obrazovanje</button>
+            <button class="tab" type="button" role="tab" id="tab-skills" data-tab="skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1" data-i18n="skills.title">Alati i vještine</button>
           </div>
 
-          <div class="card reveal">
-            <h3 class="card-title"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span><span data-i18n="edu.title">Obrazovanje</span></h3>
-            <p class="degree"><strong data-i18n="edu.degree">Dvije master diplome</strong><span data-i18n="edu.field">Računarske nauke · fokus na razvoj AI alata</span></p>
-            <ul class="unis">
-              <li>
-                <span class="uni-badge uni-badge--me" role="img" aria-label="Montenegro">&#x1F1F2;&#x1F1EA;</span>
-                <div>
-                  <h4 data-i18n="edu.u1">Univerzitet Mediteran</h4>
-                  <p data-i18n="edu.u1loc">Podgorica, Crna Gora</p>
-                </div>
-              </li>
-              <li>
-                <span class="uni-badge uni-badge--se" role="img" aria-label="Sweden">&#x1F1F8;&#x1F1EA;</span>
-                <div>
-                  <h4>Mälardalen University</h4>
-                  <p data-i18n="edu.u2loc">Västerås, Švedska</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <div class="about reveal">
+            <header class="about-intro">
+              <p class="eyebrow" data-i18n="about.eyebrow">O meni</p>
+              <h2 data-i18n="about.title">Inženjer po obrazovanju, game developer po pozivu.</h2>
+              <p data-i18n="about.lead">Tokom studija fokusirao sam se na razvoj AI alata, uključujući kompjutersku viziju i predikciju kvarova na vozovima. Usput sam se zainteresovao za razvoj igara, kojim se danas profesionalno bavim. Radim u Unity-ju i C#-u, vodim projekte od ideje do objave i dodajem im upravljanje zvukom, glasom ili crtežom.</p>
+              <a class="btn btn-primary" href="#kontakt" data-i18n="hero.cta2">Kontakt</a>
+            </header>
 
-          <div class="card card--wide reveal">
-            <h3 class="card-title"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-tool"/></svg></span><span data-i18n="skills.title">Alati i vještine</span></h3>
-            <ul class="skills">
-              <li class="skill--hot">Unity</li>
-              <li class="skill--hot">C#</li>
-              <li class="skill--hot" data-i18n="skill.design">Game dizajn</li>
-              <li data-i18n="skill.gameplay">Gameplay programiranje</li>
-              <li>Game UI / UX</li>
-              <li>Multiplayer</li>
-              <li class="skill--hot" data-i18n="skill.ai">AI / mašinsko učenje</li>
-              <li data-i18n="skill.sound">Detekcija zvuka</li>
-              <li data-i18n="skill.speech">Prepoznavanje govora</li>
-              <li data-i18n="skill.digits">Kompjuterska vizija</li>
-              <li data-i18n="skill.predict">Prediktivno održavanje</li>
-              <li data-i18n="skill.progression">Progresija i ekonomija igre</li>
-              <li>Mobile</li>
-              <li>Desktop</li>
-              <li>WebGL</li>
-            </ul>
+            <div class="about-panels">
+              <div class="about-panel" id="panel-exp" role="tabpanel" aria-labelledby="tab-exp" data-tab-panel="exp">
+                <ul class="items">
+                  <li class="item">
+                    <span class="ring"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+                    <div>
+                      <p class="item-kicker" data-i18n="exp.now">Trenutno</p>
+                      <h3>Game Developer</h3>
+                      <p class="item-org">Hugo FM</p>
+                      <p data-i18n="exp.d1">Radim na brojnim projektima za Hugo FM, igrama i aplikacijama sa AI funkcionalnostima, među kojima su Fart Runner, Frootz Fighters i Mr Farts App.</p>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="ring"><svg class="icon" aria-hidden="true"><use href="#i-tool"/></svg></span>
+                    <div>
+                      <p class="item-kicker" data-i18n="exp.yrs">2 godine</p>
+                      <h3 data-i18n="exp.role2">Game development i dizajn</h3>
+                      <p class="item-org">Unity · C#</p>
+                      <p data-i18n="exp.d2">Dizajn i razvoj igara za mobilne uređaje, desktop i web.</p>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="ring"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+                    <div>
+                      <p class="item-kicker" data-i18n="exp.thesis">Master teza</p>
+                      <h3 data-i18n="exp.role3">AI alat za predikciju kvarova</h3>
+                      <p class="item-org">Alstom</p>
+                      <p data-i18n="exp.d3">Master tezu sam odradio u industriji, u firmi Alstom, gdje sam razvio alat za predikciju kvarova na Alstom vozovima.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="about-panel" id="panel-edu" role="tabpanel" aria-labelledby="tab-edu" data-tab-panel="edu">
+                <ul class="items">
+                  <li class="item">
+                    <span class="ring"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+                    <div>
+                      <h3 data-i18n="edu.degree">Dvije master diplome</h3>
+                      <p data-i18n="edu.field">Računarske nauke · fokus na razvoj AI alata</p>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="ring ring--flag" role="img" aria-label="Montenegro">&#x1F1F2;&#x1F1EA;</span>
+                    <div>
+                      <h3 data-i18n="edu.u1">Univerzitet Mediteran</h3>
+                      <p data-i18n="edu.u1loc">Podgorica, Crna Gora</p>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="ring ring--flag" role="img" aria-label="Sweden">&#x1F1F8;&#x1F1EA;</span>
+                    <div>
+                      <h3>Mälardalen University</h3>
+                      <p data-i18n="edu.u2loc">Västerås, Švedska</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="about-panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" data-tab-panel="skills">
+                <ul class="skills">
+                  <li class="skill--hot">Unity</li>
+                  <li class="skill--hot">C#</li>
+                  <li class="skill--hot" data-i18n="skill.design">Game dizajn</li>
+                  <li class="skill--hot" data-i18n="skill.ai">AI / mašinsko učenje</li>
+                  <li data-i18n="skill.gameplay">Gameplay programiranje</li>
+                  <li>Game UI / UX</li>
+                  <li>Multiplayer</li>
+                  <li data-i18n="skill.sound">Detekcija zvuka</li>
+                  <li data-i18n="skill.speech">Prepoznavanje govora</li>
+                  <li data-i18n="skill.digits">Kompjuterska vizija</li>
+                  <li data-i18n="skill.predict">Prediktivno održavanje</li>
+                  <li data-i18n="skill.progression">Progresija i ekonomija igre</li>
+                  <li>Mobile</li>
+                  <li>Desktop</li>
+                  <li>WebGL</li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ CALLS TO ACTION ============ -->
+    <div class="rivets" aria-hidden="true"></div>
+    <section class="split" id="kontakt">
+      <a class="split-panel split-panel--game" href="https://play.google.com/store/apps/details?id=com.dgdev.mathgame" target="_blank" rel="noopener">
+        <img class="split-art" src="img/hero-hoa.webp" width="1254" height="1254" alt="" loading="lazy">
+        <div class="split-copy">
+          <p class="eyebrow">Heroes of Alatyr</p>
+          <h2 data-i18n="split.title">Kreni u avanturu</h2>
+          <p data-i18n="split.lead">Preuzmi igru na Google <span class="nowrap">Play-u</span> i pobijedi protivnike matematikom.</p>
+          <span class="split-go" aria-hidden="true"><svg class="icon"><use href="#i-link"/></svg></span>
+        </div>
+      </a>
+      <div class="split-panel split-panel--contact">
+        <img class="split-art" src="img/dg-art.webp" width="760" height="760" alt="" loading="lazy">
+        <div class="split-copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
+          <h2 data-i18n="contact.title">Imaš ideju za igru? Hajde da je napravimo.</h2>
+          <p data-i18n="contact.lead">Otvoren sam za saradnju, nove projekte i razgovore o igrama. Javi se, rado ću popričati.</p>
+          <div class="contact-links" id="contact-links"></div>
         </div>
       </div>
     </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section" id="kontakt">
-      <div class="container">
-        <div class="contact reveal">
-          <div class="contact-copy">
-            <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
-            <h2 data-i18n="contact.title">Imaš ideju za igru? Hajde da je napravimo.</h2>
-            <p data-i18n="contact.lead">Otvoren sam za saradnju, nove projekte i razgovore o igrama. Javi se, rado ću popričati.</p>
-          </div>
-          <div class="contact-actions">
-            <p class="contact-actions-label" data-i18n="contact.prompt">Javi mi se</p>
-            <div class="contact-links" id="contact-links"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="rivets" aria-hidden="true"></div>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <a class="brand brand--small" href="#top">
-        <img src="img/dg-logo.webp" width="256" height="256" alt="" loading="lazy">
-        <span>Predrag <span class="muted">· DG Development</span></span>
-      </a>
-      <p class="muted">© <span id="year">2026</span> · Unity Game Developer</p>
+    <div class="container">
+      <h2 class="footer-title" data-i18n="contact.prompt">Javi mi se</h2>
+      <div class="footer-social" id="footer-social"></div>
+
+      <div class="footer-row">
+        <nav class="footer-links" data-i18n-aria="nav.aria" aria-label="Glavna navigacija">
+          <a href="#projekti" data-i18n="nav.projects">Projekti</a>
+          <a href="#o-meni" data-i18n="nav.about">O meni</a>
+          <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <img src="img/dg-logo.webp" width="256" height="256" alt="DG Development" loading="lazy">
+        <div>
+          <p>Predrag · DG Development</p>
+          <p class="muted">© <span id="year">2026</span> · Unity Game Developer</p>
+        </div>
+      </div>
     </div>
   </footer>
 

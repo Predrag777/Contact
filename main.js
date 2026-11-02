@@ -18,22 +18,28 @@ const EN = {
   'nav.about': 'About',
   'nav.contact': 'Contact',
 
-  'hero.badge': 'New: Heroes of Alatyr is out',
-  'hero.hello': 'Hi, I’m Predrag, game developer at Hugo FM',
+  'nav.cta': 'Get the game',
+  'hero.tabs': 'My games',
+  'hero.hoa.eyebrow': 'My new game',
+  'hero.hoa.title': 'Heroes of Alatyr is out',
+  'hero.hoa.lead': 'An educational adventure where you beat your enemies by drawing the answer to a math problem on screen.',
+  'hero.more': 'More about the game',
+  'hero.avail': 'Available on Android',
+  'hero.view': 'See the project',
+
+  'hero.hello': 'Hi, I’m Predrag',
+  'intro.badge': 'Currently: Game Developer at Hugo FM',
   'hero.title': 'I build games, from the first idea to the <span class="hl">final build</span>.',
   'hero.lead': 'I hold two master’s degrees in Computer Science, from University Mediterranean in Montenegro and Mälardalen University in Sweden. During my studies, I focused on building AI tools and also became interested in game development. For the past two years, I’ve worked professionally in game development and design on projects for Hugo FM. I also build my own AI models into games for sound, speech and drawing recognition.',
   'hero.cta1': 'See my projects',
   'hero.cta2': 'Get in touch',
-  'hero.play': 'Get Heroes of Alatyr',
-  'release.title': 'Heroes of Alatyr is out',
-  'release.sub': 'It’s on Google Play, ready to download.',
   'release.cta': 'Get it on Google Play',
 
   'proj.eyebrow': 'Featured projects',
   'proj.title': 'Four projects. One developer.',
   'proj.lead': 'I develop Fart Runner, Frootz Fighters and Mr Farts App for Hugo FM, while Heroes of Alatyr is my own game, now out on Google Play. My work includes game development and design, as well as AI tools for sound detection, speech recognition and computer vision.',
   'client.hugo': 'Made for Hugo FM',
-  'client.own': 'My own game · out now',
+  'client.own': 'My own game · now on Google Play',
   'solo': 'Solo · development & design',
   'client.live': 'Live · constantly evolving',
   'features': 'Highlights',
@@ -105,6 +111,9 @@ const EN = {
   'skill.progression': 'Progression & in-game economy',
 
 
+  'split.title': 'Start your adventure',
+  'split.lead': 'Get the game on Google Play and beat your enemies with math.',
+
   'contact.eyebrow': 'Contact',
   'contact.prompt': 'Get in touch',
   'contact.title': 'Got a game idea? Let’s build it.',
@@ -151,6 +160,14 @@ const EN = {
     a.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#${d.icon}"/></svg><span${d.i18n ? ` data-i18n="${d.i18n}"` : ''}></span>`;
     a.querySelector('span').textContent = typeof d.label === 'function' ? d.label(value) : d.label;
     contactBox.appendChild(a);
+
+    const social = document.createElement('a');
+    social.href = href;
+    social.title = d.key === 'email' ? value : a.querySelector('span').textContent;
+    social.setAttribute('aria-label', social.title);
+    if (a.target) { social.target = a.target; social.rel = a.rel; }
+    social.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#${d.icon}"/></svg>`;
+    document.getElementById('footer-social').appendChild(social);
   });
 
   /* ---------- i18n ---------- */
@@ -207,6 +224,43 @@ const EN = {
       if (s) sectionIO.observe(s);
     });
   }
+
+  /* ---------- Tabs (hero games, about section) ---------- */
+  function setupTabs(tabs, onSelect) {
+    const select = (tab, focus) => {
+      tabs.forEach(t => {
+        const on = t === tab;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+      });
+      onSelect(tab);
+      if (focus) tab.focus();
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', e => {
+        const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (!step) return;
+        e.preventDefault();
+        select(tabs[(i + step + tabs.length) % tabs.length], true);
+      });
+    });
+    select(tabs.find(t => t.classList.contains('is-active')) || tabs[0]);
+  }
+
+  const heroScenes = [...document.querySelectorAll('[data-scene]')];
+  const heroPanels = [...document.querySelectorAll('[data-panel]')];
+  setupTabs([...document.querySelectorAll('.hero-tab')], tab => {
+    const game = tab.dataset.game;
+    heroScenes.forEach(s => s.classList.toggle('is-active', s.dataset.scene === game));
+    heroPanels.forEach(p => { p.hidden = p.dataset.panel !== game; });
+  });
+
+  const aboutPanels = [...document.querySelectorAll('[data-tab-panel]')];
+  setupTabs([...document.querySelectorAll('.tab')], tab => {
+    aboutPanels.forEach(p => { p.hidden = p.dataset.tabPanel !== tab.dataset.tab; });
+  });
 
   /* ---------- Reveal on scroll ---------- */
   const reveals = document.querySelectorAll('.reveal');
